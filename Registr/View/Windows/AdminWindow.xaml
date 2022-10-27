@@ -1,0 +1,45 @@
+﻿<Window x:Class="Registr.View.Windows.AdminWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Registr.View.Windows"
+      mc:Ignorable="d" 
+      Title="AdminWindow"
+        Height="468"
+        Width="252"
+        WindowStartupLocation="CenterScreen">
+    
+
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Button x:Name="btnLoadUsers"
+                    Content="Load User"
+                    Click="btnLoadUsers_Ckick"/>
+            <Button x:Name="btnLoadSome"
+               Content="..."
+              />
+            <TextBlock Text="Добавить пользователя"/>
+            <TextBlock Text="Имя"/>
+            <TextBox x:Name="tbFirstName"/>
+            <TextBlock Text="Фамилия"/>
+            <TextBox x:Name="tbMiddleName"/>
+            <TextBlock Text="Отчество"/>
+            <TextBox x:Name="tbLastName"/>
+            <TextBlock Text="Дата рождения"/>
+            <TextBox x:Name="tbBordDate"/>
+            <TextBlock Text="Зарплата"/>
+            <TextBox x:Name="tbSalary"/>
+            <Button x:Name="btnAddUser" Content="Добавить" Click="btnAddUser_Click"/>
+        </StackPanel>
+        <Frame x:Name="mainFrame" Grid.Column="1"/>
+    </Grid>
+</Window>

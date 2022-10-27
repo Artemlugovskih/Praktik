@@ -1,0 +1,27 @@
+﻿<Window x:Class="Registr.View.Windows.AuthorizationWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Registr.View.Windows"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="300"
+      Title="AuthorizationWindow">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="20" VerticalAlignment="Center">
+            <TextBlock Text="Введите логин"/>
+            <TextBox x:Name="tbLogin"/>
+            <TextBlock Text="Введите пароль"/>
+            <PasswordBox x:Name="tbPassword"/>
+        </StackPanel>
+        <Button x:Name="btnSignIn"
+                Grid.Row="1"
+                Content="Войти"
+                Click="btnSignIn_Click"/>
+    </Grid>
+</Window>
